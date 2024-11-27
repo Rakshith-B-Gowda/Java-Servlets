@@ -22,7 +22,9 @@ public class DisplayAllStudentServlet extends HttpServlet {
 		Connection connection = null;
 		
 		try {
+		
 			Class.forName("com.mysql.cj.jdbc.Driver");
+			
 			connection = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/servlet_student-management-system", "root", "tiger");
 			PreparedStatement statement = connection.prepareStatement("SELECT * FROM student");
@@ -34,6 +36,12 @@ public class DisplayAllStudentServlet extends HttpServlet {
 			
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }

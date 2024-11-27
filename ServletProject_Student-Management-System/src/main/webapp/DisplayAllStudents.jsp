@@ -5,7 +5,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Student Details</title>
+<link rel="stylesheet" href="./DisplayAllStudents-style.css">
 </head>
 <body>
 	<%
@@ -13,7 +15,7 @@
 	%>
 	
 	<h1>Student Details</h1>
-	<table border="">
+	<table>
 		<tr>
 			<th>Student ID</th>
 			<th>Student Name</th>
@@ -21,6 +23,7 @@
 			<th>Student Age</th>
 			<th>Student Course</th>
 			<th>Student City</th>
+			<th>Actions</th>
 		</tr>
 		<%
 			while(rs.next()) {
@@ -32,10 +35,10 @@
 			<td><%=rs.getInt("studentAge")%></td>
 			<td><%=rs.getString("studentCourse")%></td>
 			<td><%=rs.getString("studentCity")%></td>
-		</tr>
-		<tr>
-			<td colspan="3"><a href="find-by-id?studentId=<%=rs.getInt("studentId")%>">UPDATE</a></td>
-			<td colspan="3"><a href="delete-student?studentId=<%=rs.getInt("studentId")%>">DELETE</a></td>
+			<td>
+				<a href="find-by-id?studentId=<%=rs.getInt("studentId")%>">UPDATE</a>
+				<a href="delete-student?studentId=<%=rs.getInt("studentId")%>">DELETE</a>
+			</td>
 		</tr>
 		
 		<% } %>

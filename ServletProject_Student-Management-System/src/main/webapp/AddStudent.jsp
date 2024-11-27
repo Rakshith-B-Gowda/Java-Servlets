@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Add New Student</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Students</title>
+<link rel="stylesheet" href="./AddStudent-style.css">
 </head>
 <body>
 	<h1>Enter Student Details</h1>
