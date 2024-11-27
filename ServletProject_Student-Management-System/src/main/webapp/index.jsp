@@ -11,6 +11,6 @@
 <body>
 	<h1>Welcome To Student DashBoard</h1>
 	<a href="AddStudent.jsp">ADD NEW STUDENT</a>
-	<a href="display-all-students">DISPLAY ALL STUDENT</a>
+	<a href="display-all-students">DISPLAY STUDENT'S</a>
 </body>
 </html>
